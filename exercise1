@@ -1,0 +1,49 @@
+function squareNumber(number) {
+  var square = number *number;
+  console.log("The result of squaring the number " + number + " is " + square);
+  return square;
+
+}
+
+squareNumber(5);
+
+
+function halfNumber(numberz) {
+  var result = numberz / 2;
+  console.log(result + " is 50% of " + numberz);
+  return result;
+
+}
+
+halfNumber(5);
+
+
+function percentOf(numberOne, numberTwo) {
+  var resultOne =  numberOne/numberTwo*100
+  console.log(resultOne);
+  return resultOne;
+
+}
+
+percentOf(22,33);
+
+
+function areaOfCircle(radius) {
+  var area = Math.PI * squareNumber(radius);
+  console.log("!" + area);
+  return area;
+}
+
+areaOfCircle(5);
+
+
+function calculator(num) {
+  var half = halfNumber(num);
+  var square = squareNumber(half);
+  var squareOfCircle = areaOfCircle(square);
+  var percentage = percentOf(squareOfCircle,square);
+  console.log(percentage);
+
+}
+
+calculator(5);
