@@ -1,0 +1,43 @@
+1. console.log(var);
+2. console.log(var.length);
+3. bucketList.push('item 3', 'item 4')
+4. myArray[0]
+5. firstName[firstName.length - 1] - find last character of the string
+6. Arrays are mutable, meaning we can change values inside the array. Strings are not mutable.
+    var ourArray = [3,2,1];
+    ourArray[0] = 1; // equals [1,2,1]
+
+7. var arr = [
+[1,2,3],
+[4,5,6],
+[7,8,9],
+[[10,11,12], 13, 14]
+];
+arr[3]; // equals [[10,11,12], 13, 14]
+arr[3][0]; // equals [10,11,12]
+arr[3][0][1]; // equals 11
+
+8. myArray.push(["dog", 3]);
+
+9. pop removes last value
+var myArray = [["John", 23], ["cat", 2]];
+var removedFromMyArray = myArray.pop();
+
+10. shift removes first value
+
+var myArray = [["John", 23], ["dog", 3]];
+var removedFromMyArray = myArray.shift();
+
+11. .unshift() adds the element at the beginning of the array.
+myArray.unshift(["Paul", 35]);
+
+12. We can pass values into a function with arguments. You can use a return statement to send a value back out of a function.
+function plusThree(num) {
+return num + 3;
+}
+var answer = plusThree(5); // 8
+
+13. var animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+
+console.log(animals.slice(2, 4));
+// expected output: Array ["camel", "duck"]
