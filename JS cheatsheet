@@ -1,6 +1,8 @@
 1. console.log(var);
 2. console.log(var.length);
 3. bucketList.push('item 3', 'item 4')
+
+              ARRAYS
 4. myArray[0]
 5. firstName[firstName.length - 1] - find last character of the string
 6. Arrays are mutable, meaning we can change values inside the array. Strings are not mutable.
@@ -28,7 +30,7 @@ var removedFromMyArray = myArray.pop();
 var myArray = [["John", 23], ["dog", 3]];
 var removedFromMyArray = myArray.shift();
 
-11. .unshift() adds the element at the beginning of the array.
+11. .unshift() adds the element at the beginning of the array. Returns new length of the array.
 myArray.unshift(["Paul", 35]);
 
 12. We can pass values into a function with arguments. You can use a return statement to send a value back out of a function.
@@ -41,3 +43,194 @@ var answer = plusThree(5); // 8
 
 console.log(animals.slice(2, 4));
 // expected output: Array ["camel", "duck"]
+///////
+var myArray = [1, 2, 3, 4, 5, 6, 7];
+
+console.log( myArray.slice(0, -1) );
+
+14. Reverse array
+myFamily.reverse();
+
+15. For cloning arrays use slice(0)
+
+16. var newName = prompt("Give me your name"); displays a prompt
+
+                        STRINGS
+
+17. var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var sln = txt.length;
+
+18. Breaking line of code WITHIN A STRING
+document.getElementById("demo").innerHTML = "Hello \
+Dolly!";
+
+19.  When using the == operator, equal strings are equal:
+var x = "John";
+var y = new String("John");
+
+// (x == y) is true because x and y have equal values
+
+20. When using the === operator, equal strings are not equal, because the === operator expects equality in both type and value.
+var x = "John";
+var y = new String("John");
+
+// (x === y) is false because x and y have different types (string and object)
+
+21. var x = new String("John");
+var y = new String("John");
+
+// (x == y) is false because x and y are different objects
+
+22. Note the difference between (x==y) and (x===y).
+Comparing two JavaScript objects will always return false.
+
+23. Finding a String in a String
+The indexOf() method returns the index of (the position of) the first occurrence of a specified text in a string:
+var str = "Please locate where 'locate' occurs!";
+var pos = str.indexOf("locate");
+
+24. The lastIndexOf() method returns the index of the last occurrence of a specified text in a string:
+
+25. Both the indexOf(), and the lastIndexOf() methods return -1 if the text is not found.
+
+26. Both methods accept a second parameter as the starting position for the search:
+var str = "Please locate where 'locate' occurs!";
+var pos = str.indexOf("locate",15);
+
+27. The search() method searches a string for a specified value and returns the position of the match:
+var str = "Please locate where 'locate' occurs!";
+var pos = str.search("locate");
+
+28. Difference between indexOf() and search()
+  The search() method cannot take a second start position argument.
+  The indexOf() method cannot take powerful search values (regular expressions).
+
+29. slice() extracts a part of a string and returns the extracted part in a new string.
+var str = "Apple, Banana, Kiwi";
+var res = str.slice(7, 13); or  var res = str.slice(-12, -6);
+If you omit the second parameter, the method will slice out the rest of the string:
+ var res = str.slice(7);
+
+ or, counting from the end:
+  var res = str.slice(-12);
+
+30. substring() is similar to slice().
+The difference is that substring() cannot accept negative indexes.
+var str = "Apple, Banana, Kiwi";
+var res = str.substring(7, 13);
+
+31. substr() is similar to slice().
+The difference is that the second parameter specifies the length of the extracted part.
+var str = "Apple, Banana, Kiwi";
+var res = str.substr(7, 6);
+The result of res will be:
+Banana
+
+If the first parameter is negative, the position counts from the end of the string.
+The second parameter can not be negative, because it defines the length.
+If you omit the second parameter, substr() will slice out the rest of the string.
+
+32. The replace() method replaces a specified value with another value in a string:
+str = "Please visit Microsoft!";
+var n = str.replace("Microsoft", "W3Schools");
+The replace() method does not change the string it is called on. It returns a new string.
+By default, the replace() function is case sensitive. Writing MICROSOFT (with upper-case) will not work:
+To replace case insensitive, use a regular expression with an /i flag (insensitive):
+str = "Please visit Microsoft!";
+var n = str.replace(/MICROSOFT/i, "W3Schools");
+
+To replace all matches, use a regular expression with a /g flag (global match):
+str = "Please visit Microsoft and Microsoft!";
+var n = str.replace(/Microsoft/g, "W3Schools");
+
+33. A string is converted to upper case with toUpperCase():
+var text1 = "Hello World!";       // String
+var text2 = text1.toUpperCase()
+
+34. toLowerCase()
+
+35. concat() joins two or more strings:
+var text1 = "Hello";
+var text2 = "World";
+var text3 = text1.concat(" ", text2);
+The concat() method can be used instead of the plus operator. These two lines do the same:
+
+36. Extracting String Characters
+    charAt(position)
+    charCodeAt(position)
+
+The charAt() method returns the character at a specified index (position) in a string:
+Example
+var str = "HELLO WORLD";
+str.charAt(0);            // returns H
+
+The charCodeAt() method returns the unicode of the character at a specified index in a string:
+Example
+var str = "HELLO WORLD";
+str.charCodeAt(0);         // returns 72
+
+37. Converting a String to an Array
+var txt = "a,b,c,d,e";   // String
+txt.split(",");          // Split on commas
+txt.split(" ");          // Split on spaces
+txt.split("|");          // Split on pipe
+
+If the separator is omitted, the returned array will contain the whole string in index [0].
+
+If the separator is "", the returned array will be an array of single characters:
+var txt = "Hello";       // String
+txt.split("");           // Split in characters
+
+38. && - and, || - or,
+
+39. Generating a random number within the range
+Math.floor(Math.random() * (max - min + 1)) + min
+
+40. Parse string, return integer
+parseInt()
+
+41. Use Redex to convert to binary, extracts
+parseInt(string, radix);
+
+*********OBJECTS**********
+
+42. Object lookup
+myObject[someVarContainingTheKey]
+
+43. var myObj = {
+  gift: "pony",
+  pet: "kitten",
+  bed: "sleigh"
+};
+
+function checkObj(checkProp) {
+  if (myObj.hasOwnProperty(checkProp)) {
+    return myObj[checkProp];
+  }
+  else {
+    return "Not Found";
+  }
+}
+
+44. Accessing nested objects
+var myStorage = {
+  "car": {
+    "inside": {
+      "glove box": "maps",
+      "passenger seat": "crumbs"
+     },
+    "outside": {
+      "trunk": "jack"
+    }
+  }
+};
+
+var gloveBoxContents = myStorage.car.inside["glove box"];
+console.log(gloveBoxContents);
+
+45. var ourArray = [];
+var i = 0;
+while(i < 5) {
+  ourArray.push(i);
+  i++;
+}
