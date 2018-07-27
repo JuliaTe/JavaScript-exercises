@@ -29,7 +29,7 @@ function numberSum(N) {
 
 console.log(numberSum(5));
 
-*/
+
 
 function factorialize(N) {
   var factorial = 1;
@@ -41,3 +41,5 @@ function factorialize(N) {
 }
 
 console.log(factorialize(5));
+
+*/
