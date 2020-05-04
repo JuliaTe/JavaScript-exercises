@@ -1,6 +1,8 @@
 1. console.log(var);
 2. console.log(var.length);
 3. bucketList.push('item 3', 'item 4')
+Undefined - data type of a variable that doesn't have a value yet.
+NULL - also means 'nonexistent'
 
               ARRAYS
 4. myArray[0]
@@ -234,3 +236,10 @@ while(i < 5) {
   ourArray.push(i);
   i++;
 }
+
+46. var ourArray = [];
+var i = 0;
+do {
+  ourArray.push(i);
+  i++;
+} while (i < 5);
