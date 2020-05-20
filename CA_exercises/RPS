@@ -1,0 +1,262 @@
+let playerOneMoveOneType;
+let playerOneMoveTwoType;
+let playerOneMoveThreeType;
+
+//Player 1 move values
+let playerOneMoveOneValue;
+let playerOneMoveTwoValue;
+let playerOneMoveThreeValue;
+
+// Player 2 move types
+let playerTwoMoveOneType;
+let playerTwoMoveTwoType;
+let playerTwoMoveThreeType;
+
+// Player 2 move values
+let playerTwoMoveOneValue;
+let playerTwoMoveTwoValue;
+let playerTwoMoveThreeValue;
+
+const isValidMove = (moveType) => {
+  if (moveType === 'rock' || moveType === 'paper' || moveType === 'scissors') {
+    return moveType;
+  }
+  else {
+    return false;
+  }
+};
+
+const setPlayerMoves = ( player, moveOneType, moveOneValue, moveTwoType, moveTwoValue, moveThreeType, moveThreeValue ) => {
+  if (player.toLowerCase() === 'player one') {
+    if (moveOneValue + moveTwoValue + moveThreeValue === 99 && (moveOneValue + moveTwoValue + moveThreeValue) > 3 ) {
+      if (isValidMove(moveOneType) && isValidMove(moveTwoType) && isValidMove(moveThreeType)) {
+        // Setting moves for Player One
+        playerOneMoveOneType = moveOneType;
+        playerOneMoveTwoType = moveTwoType;
+        playerOneMoveThreeType = moveThreeType;
+
+        // Setting strength for Player One
+        playerOneMoveOneValue = moveOneValue;
+        playerOneMoveTwoValue = moveTwoValue;
+        playerOneMoveThreeValue = moveThreeValue;
+      }
+      else if (player.toLowerCase() === 'player two') {
+        // Setting moves for Player Two
+        playerTwoMoveOneType = moveOneType;
+        playerTwoMoveTwoType = moveTwoType;
+        playerTwoMoveThreeType = moveThreeType;
+
+        // Setting strength for Player Two
+        playerTwoMoveOneValue = moveOneValue;
+        playerTwoMoveTwoValue = moveTwoValue;
+        playerTwoMoveThreeValue = moveThreeValue;
+      }
+      else {
+        return false;
+        //console.log(console.log('Available move types are: \'rock\', \'paper\', \'scissors\''));
+      }
+    }
+      else {
+        console.log('Sum of the strength points should be equal to 99. Strength of each move should be at least 1');
+      }
+    }
+    else {
+      console.log('Options for choosing a player: \'player one\' or \'player two\'.');
+  }
+};
+
+setPlayerMoves('Player One', 'rock', 11, 'paper', 33, 'scissors', 55);
+setPlayerMoves('Player Two', 'scissors', 30, 'rock', 60, 'paper', 9);
+/*
+console.log(playerOneMoveOneType);
+console.log(playerOneMoveTwoType);
+console.log(playerOneMoveThreeType);
+
+//Player 1 move values
+console.log(playerOneMoveOneValue);
+console.log(playerOneMoveTwoValue);
+console.log(playerOneMoveThreeValue);
+
+// Player 2 move types
+console.log(playerTwoMoveOneType);
+console.log(playerTwoMoveTwoType);
+console.log(playerTwoMoveThreeType);
+
+// Player 2 move values
+console.log(playerTwoMoveOneValue);
+console.log(playerTwoMoveTwoValue);
+console.log(playerTwoMoveThreeValue);
+*/
+
+const getRoundWinner = (roundNumber, player) => {
+  if (roundNumber === 1) {
+  if (playerOneMoveOneType === 'rock') {
+    if (playerTwoMoveOneType === 'scissors') {
+      return player = 'Player One';
+    }
+    else if (playerTwoMoveOneType === 'paper') {
+      return player = 'Player Two';
+    }
+    else {
+      if (playerOneMoveOneValue > playerTwoMoveOneValue) {
+        return player = 'Player one';
+      }
+      else if (playerOneMoveOneValue < playerTwoMoveOneValue) {
+        return player = 'Player Two';
+      }
+      else if (playerOneMoveOneValue === playerTwoMoveOneValue) {
+        return 'Tie';
+      }
+    }
+  }
+  else {
+
+  }
+}
+
+};
+
+console.log(getRoundWinner(1, 'Player One'));
+
+const getGameWinner = () => {
+
+
+};
+
+const setComputerMoves = () => {
+
+  let num = Math.floor(Math.random() * 2);
+
+
+};
+let playerOneMoveOneType;
+let playerOneMoveTwoType;
+let playerOneMoveThreeType;
+
+//Player 1 move values
+let playerOneMoveOneValue;
+let playerOneMoveTwoValue;
+let playerOneMoveThreeValue;
+
+// Player 2 move types
+let playerTwoMoveOneType;
+let playerTwoMoveTwoType;
+let playerTwoMoveThreeType;
+
+// Player 2 move values
+let playerTwoMoveOneValue;
+let playerTwoMoveTwoValue;
+let playerTwoMoveThreeValue;
+
+const isValidMove = (moveType) => {
+  if (moveType === 'rock' || moveType === 'paper' || moveType === 'scissors') {
+    return moveType;
+  }
+  else {
+    return false;
+  }
+};
+
+const setPlayerMoves = ( player, moveOneType, moveOneValue, moveTwoType, moveTwoValue, moveThreeType, moveThreeValue ) => {
+  if (player.toLowerCase() === 'player one') {
+    if (moveOneValue + moveTwoValue + moveThreeValue === 99 && (moveOneValue + moveTwoValue + moveThreeValue) > 3 ) {
+      if (isValidMove(moveOneType) && isValidMove(moveTwoType) && isValidMove(moveThreeType)) {
+        // Setting moves for Player One
+        playerOneMoveOneType = moveOneType;
+        playerOneMoveTwoType = moveTwoType;
+        playerOneMoveThreeType = moveThreeType;
+
+        // Setting strength for Player One
+        playerOneMoveOneValue = moveOneValue;
+        playerOneMoveTwoValue = moveTwoValue;
+        playerOneMoveThreeValue = moveThreeValue;
+      }
+      else if (player.toLowerCase() === 'player two') {
+        // Setting moves for Player Two
+        playerTwoMoveOneType = moveOneType;
+        playerTwoMoveTwoType = moveTwoType;
+        playerTwoMoveThreeType = moveThreeType;
+
+        // Setting strength for Player Two
+        playerTwoMoveOneValue = moveOneValue;
+        playerTwoMoveTwoValue = moveTwoValue;
+        playerTwoMoveThreeValue = moveThreeValue;
+      }
+      else {
+        return false;
+        //console.log(console.log('Available move types are: \'rock\', \'paper\', \'scissors\''));
+      }
+    }
+      else {
+        console.log('Sum of the strength points should be equal to 99. Strength of each move should be at least 1');
+      }
+    }
+    else {
+      console.log('Options for choosing a player: \'player one\' or \'player two\'.');
+  }
+};
+
+setPlayerMoves('Player One', 'rock', 11, 'paper', 33, 'scissors', 55);
+setPlayerMoves('Player Two', 'scissors', 30, 'rock', 60, 'paper', 9);
+/*
+console.log(playerOneMoveOneType);
+console.log(playerOneMoveTwoType);
+console.log(playerOneMoveThreeType);
+
+//Player 1 move values
+console.log(playerOneMoveOneValue);
+console.log(playerOneMoveTwoValue);
+console.log(playerOneMoveThreeValue);
+
+// Player 2 move types
+console.log(playerTwoMoveOneType);
+console.log(playerTwoMoveTwoType);
+console.log(playerTwoMoveThreeType);
+
+// Player 2 move values
+console.log(playerTwoMoveOneValue);
+console.log(playerTwoMoveTwoValue);
+console.log(playerTwoMoveThreeValue);
+*/
+
+const winningMoves = (moveOne, moveTwo) => {
+  if (playerOneMoveOneType === 'rock') {
+    if (playerTwoMoveOneType === 'scissors') {
+      return player = 'Player One';
+    }
+    else if (playerTwoMoveOneType === 'paper') {
+      return player = 'Player Two';
+    }
+    else {
+      if (playerOneMoveOneValue > playerTwoMoveOneValue) {
+        return player = 'Player one';
+      }
+      else if (playerOneMoveOneValue < playerTwoMoveOneValue) {
+        return player = 'Player Two';
+      }
+      else if (playerOneMoveOneValue === playerTwoMoveOneValue) {
+        return 'Tie';
+      }
+    }
+  }
+
+
+  else {}
+
+
+
+};
+
+const getRoundWinner = (roundNumber) => {
+}
+
+
+const getGameWinner = () => {
+};
+
+
+const setComputerMoves = () => {
+
+  let num = Math.floor(Math.random() * 2);
+
+};
