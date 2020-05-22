@@ -688,27 +688,27 @@ export default Airplane;
 let Airplane = {};
 
 Airplane.availableAirplanes = [
-{
-  name: 'AeroJet',
-  fuelCapacity: 800
- }, 
- {name: 'SkyJet',
-  fuelCapacity: 500
- }
-];
-
-export default Airplane;
-
-import Airplane from './airplane';
-
-function displayFuelCapacity() {
-  Airplane.availableAirplanes.forEach(function(element){
-  console.log('Fuel Capacity of ' + element.name + ': ' + element.fuelCapacity);
-  });
-}
-
-displayFuelCapacity();
-
+  {
+    name: 'AeroJet',
+    fuelCapacity: 800
+   }, 
+   {name: 'SkyJet',
+    fuelCapacity: 500
+   }
+  ];
+  
+  export default Airplane;
+  
+  import Airplane from './airplane';
+  
+  function displayFuelCapacity() {
+    Airplane.availableAirplanes.forEach(function(element){
+    console.log('Fuel Capacity of ' + element.name + ': ' + element.fuelCapacity);
+    });
+  }
+  
+  displayFuelCapacity();
+  
 
 
 
