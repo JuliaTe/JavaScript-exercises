@@ -734,9 +734,54 @@ Airplane.availableAirplanes = [
   const orderPromise = orderSunglasses();
   console.log(orderPromise);
 
+  console.log("This is the first line of code in app.js.");
+  // Keep the line above as the first line of code
+  // Write your code here:
+  const usingSTO = () => {
+    console.log("Hello Jules! You are doing a great job!")
+  }
+  
+  setTimeout(usingSTO, 60)
+  
+  // Keep the line below as the last line of code:
+  console.log("This is the last line of code in app.js.");
 
 
+  const {checkInventory} = require('./library.js');
 
+const order = [['sunglasses', 1], ['bags', 2]];
+
+// Write your code below:
+
+
+const number = 1
+
+const handleSuccess = (resolvedV) => {
+  console.log(resolvedV);
+}
+
+const handleFailure = (rejectReason) => {
+  console.log(rejectReason);
+}
+
+checkInventory(order).then(handleSuccess, handleFailure)
+
+
+const {checkInventory} = require('./library.js');
+
+const order = [['sunglasses', 1], ['bags', 2]];
+
+const handleSuccess = (resolvedValue) => {
+  console.log(resolvedValue);
+};
+
+const handleFailure = (rejectReason) => {
+  console.log(rejectReason);
+};
+
+// Write your code below:
+
+checkInventory(order).then(handleSuccess).catch(handleFailure);
 
 
 
