@@ -747,6 +747,27 @@ Airplane.availableAirplanes = [
   console.log("This is the last line of code in app.js.");
 
 
+  const {checkInventory} = require('./library.js');
+
+const order = [['sunglasses', 1], ['bags', 2]];
+
+// Write your code below:
+
+
+const number = 1
+
+const handleSuccess = (resolvedV) => {
+  console.log(resolvedV);
+}
+
+const handleFailure = (rejectReason) => {
+  console.log(rejectReason);
+}
+
+checkInventory(order).then(handleSuccess, handleFailure)
+
+
+
 
 
 
