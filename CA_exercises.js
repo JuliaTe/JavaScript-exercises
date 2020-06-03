@@ -1110,6 +1110,13 @@ console.log(`Dinner is served. We're having ${vegetable}, ${starch}, ${protein},
 
 serveDinnerAgain();
 
+console.log('First message!');
+setTimeout(() => {
+   console.log('This message will always run last...');
+}, 0);
+console.log('Second message!');
+
+
 
 
 
