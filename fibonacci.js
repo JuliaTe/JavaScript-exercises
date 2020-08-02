@@ -3,7 +3,14 @@ function calcFib (n) {
     for (var i = 2; i < n; i ++) {
       var fibNum = fib[i - 2] + fib[i - 1];
       fib.push(fibNum);
+
+
     }
     return fib;
+
+
 }
-console.log(calcFib(10));
+
+
+
+console.log(calcFib(7));
