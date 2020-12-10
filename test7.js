@@ -37,16 +37,9 @@ function findFirstWordWithMostRepeatedChars(text) {
     if (repeatCountForWord > maxRepeatCountOverall) {
       maxRepeatCountOverall = repeatCountForWord
       wordWithMaxRepeatCount = words[i]
-      console.log(wordWithMaxRepeatCount)
     }
   }
-  // for (i in words) {
-  //   let repeatCountForWord = findMaxRepeatCountInWord(words[i])
-  //   if (repeatCountForWord > maxRepeatCountOverall) {
-  //     maxRepeatCountOverall = repeatCountForWord
-  //     wordWithMaxRepeatCount = words[i]
-  //   }
-  // }
+  
   return wordWithMaxRepeatCount
 }
 
