@@ -3,7 +3,9 @@ function map(array, callbackFunction) {
   var newArray = [];
 
   for (var i = 0; i < array.length; i++) {
-    newArray = newArray + callbackFunction(element);
+    let element = array[i]
+    let result = callbackFunction(element);
+    newArray.push(result)
   }
 
   return newArray;
@@ -17,23 +19,32 @@ function cubeAll(numbers) {
 
 // ASSERTION FUNCTION(S) TO BE USED
 function assertArraysEqual(expected, actual, testName) {
-    let equalLength = expected.length === actual.length
+  let equalLength = expected.length === actual.length
     
-    let equalValues = true
+  let equalValues = true
     for (i in expected) {
-        if (expected[i] !== actual[i]) {
-            equalValues = false
-            break
+      if (expected[i] !== actual[i]) {
+        equalValues = false
+        break
         }
     }
     
     if (equalLength && equalValues) {
         console.log('passed')
     } else {
-      console.log(`FAILED`)
+      console.log(`FAILED [${testName}] Expected ${expected}, got ${actual}`)
     }
 }
 
-assertArraysEqual([1,2,2], [1,3,2], 'This is test')
-
 // TESTS CASES
+function addTwo(val) {
+    val += 2
+}
+
+let arrayForMap = [1, 2, 3]
+let actualMap = map(arrayForMap, addTwo)
+let expectedMap = [3, 4, 5]
+assertArraysEqual(expectedMap, actualMap, 'Should correctly map elements of an array')
+
+
+
