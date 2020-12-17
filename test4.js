@@ -1,7 +1,7 @@
 // FUNCTION DEFINITION(S)
 function addFullNameProp(obj) {
   var firstName = obj.firstName;
-  var lastName = obj[lastName];
+  var lastName = obj['lastName'];
 
   if (firstName && lastName) {
     obj['fullName'] = firstName + ' ' + lastName;
@@ -23,6 +23,8 @@ function assertObjectsEqual(expected, actual, testName) {
 
 // TESTS CASES
 // 1. Result of {"name": "Julia", "lastName": "Thea"} should be equal to {"name": "Julia", "lastName": "Thea"}
-let result1 = {"name": "Julia", "lastName": "Thea"}
-asserObjectsEqual(result1, )
+let inputObject = {"firstName": "Julia", "lastName": "Thea"}
+let expectedResult = {"firstName": "Julia", "lastName": "Thea", "fullName": "Julia Thea"}
+let actualResult = addFullNameProp(inputObject)
+assertObjectsEqual(expectedResult, actualResult, "Should display the correct name")
 
